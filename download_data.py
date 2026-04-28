@@ -9,7 +9,7 @@ if not connection_string:
 container_name = "jimmy-data-raw"
 
 # 📁 Carpeta destino (plana)
-download_path = "/tmp"
+download_path = os.path.dirname(os.path.abspath(__file__))
 
 blob_service_client = BlobServiceClient.from_connection_string(connection_string)
 container_client = blob_service_client.get_container_client(container_name)
