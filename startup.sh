@@ -4,6 +4,12 @@ set -e
 
 echo "Initializing app"
 
+echo "Python version:"
+python --version
+
+echo "Installing dependencies (por si acaso)"
+pip install -r requirements.txt
+
 echo "Downloading data from Azure"
 python download_data.py
 
